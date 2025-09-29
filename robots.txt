@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nasssernassser10-glitch.github.io/alsawri-muqawalat/sitemap.xml
