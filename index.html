@@ -60,13 +60,6 @@
             font-weight: bold;
         }
 
-        /* قسم عن الشركة */
-        .section-about {
-            position: relative;
-            background: url('about-company.jpg') no-repeat center top;
-            background-size: cover;
-            height: 400px;
-        }
         .section-about .about-img {
             display: none;
         }
@@ -141,38 +134,79 @@
                 width: 90%;
             }
         }
-    </style>
+        
+        .section-about {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.about-container {
+    display: flex;
+    justify-content: center;
+}
+
+.about-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    width: auto; /* نفس حجم صور الخدمات والأعمال */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.about-box img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover; /* يحافظ على نسبة الصورة ويملأ المربع */
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.about-box h3 {
+    color: #004d99;
+    margin-bottom: 10px;
+}
+
+.about-box p {
+    color: #333;
+    font-size: 16px;
+}
+    </style >
 </head>
 <body>
 
-<header>
-    <div class="header-top">
+<header style="color: cadetblue; font-size: 20pt;
+background-color: peru;">
+    <div class="container text-center">
         <div class="logo">
-            <h1>شركة الصوري للمقاولات العامة</h1>
-            <p>جدة - المملكة العربية السعودية</p>
+            <h1 style=" color: whitesmoke;">شركة الصوري للمقاولات العامة</h1>
+            <p style=" color: whitesmoke;">جدة - المملكة العربية السعودية</p>
         </div>
-        <div class="contact">
-            <p>📞 0535753283</p>
-            <a href="https://wa.me/+966535753283" target="_blank"><i class="fab fa-whatsapp fa-2x"></i></a>
-            <a href="https://www.facebook.com/profile.php?id=100012121335187" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#about" style="color: darkred;">عن الشركة</a></li>
+                <li><a href="#services">خدماتنا</a></li>
+                <li><a href="#projects">أعمالنا</a></li>
+                <li><a href="#contact">تواصل معنا</a></li>
+            </ul>
+        </nav>
+        <div class="contact-icons">
+            <a href="tel:+966535753283" class="phone"><i class="bi bi-telephone-fill"></i></a>
+            <a href="https://wa.me/+966535753283" class="whatsapp"><i class="bi bi-whatsapp"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100012121335187" class="facebook"><i class="bi bi-facebook"></i></a>
         </div>
     </div>
-    <nav class="main-nav">
-        <ul>
-            <li><a href="#about">عن الشركة</a></li>
-            <li><a href="#services">خدماتنا</a></li>
-            <li><a href="#projects">أعمالنا</a></li>
-            <li><a href="#contact">تواصل معنا</a></li>
-        </ul>
-    </nav>
 </header>
-
 <section id="about" class="section-about">
-    <h2>عن الشركة</h2>
-    <p style="position:absolute; bottom:20px; left:20px; color:white; background:rgba(0,0,0,0.5); padding:10px; border-radius:5px;">
-    شركة الصوري للمقاولات العامة في جدة متخصصة في البناء، النجارة، التصميم الداخلي، وتقدم أفضل خدمات المقاولات العامة والصيانة للمباني. فريقنا محترف ويعمل بأحدث التقنيات لضمان جودة عالية.</p>
+    <div class="about-container">
+        <div class="about-box fade-in">
+            <img src="about-main.jpg" alt="عن الشركة">
+            <h3>عن الشركة</h3>
+            <p>
+                شركة الصوري للمقاولات العامة في جدة متخصصة في البناء، النجارة، التصميم الداخلي، وتقدم أفضل خدمات المقاولات العامة والصيانة للمباني. فريقنا محترف ويعمل بأحدث التقنيات لضمان جودة عالية.
+            </p>
+        </div>
+    </div>
 </section>
-
 <section id="services" class="section-services">
     <h2>خدماتنا</h2>
     <div class="services-container">
@@ -224,64 +258,7 @@
 </footer>
 
 </body>
-                                                     </html>            
-    </style>
-</head>
-<body>
-
-<header>
-    <div class="container text-center">
-        <div class="logo">
-            <h1>شركة الصوري للمقاولات العامة</h1>
-            <p>جدة - المملكة العربية السعودية</p>
-        </div>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="#about">عن الشركة</a></li>
-                <li><a href="#services">خدماتنا</a></li>
-                <li><a href="#projects">أعمالنا</a></li>
-                <li><a href="#contact">تواصل معنا</a></li>
-            </ul>
-        </nav>
-        <div class="contact-icons">
-            <a href="tel:+966535753283" class="phone"><i class="bi bi-telephone-fill"></i></a>
-            <a href="https://wa.me/+966535753283" class="whatsapp"><i class="bi bi-whatsapp"></i></a>
-            <a href="https://www.facebook.com/profile.php?id=100012121335187" class="facebook"><i class="bi bi-facebook"></i></a>
-        </div>
-    </div>
-</header>
-
-<section id="about">
-    <h2>عن الشركة</h2>
-    <p>شركة الصوري للمقاولات العامة في جدة متخصصة في البناء، النجارة، التصميم الداخلي، وتقدم أفضل خدمات المقاولات العامة والصيانة للمباني. فريقنا محترف ويعمل بأحدث التقنيات لضمان جودة عالية.</p>
-</section>
-
-<section id="services">
-    <h2>خدماتنا</h2>
-    <div class="services-container">
-        <div class="service-box">
-            <img src="https://nasssernassser10-glitch.github.io/alsawri-muqawalat/service-construction.jpg" alt="البناء والتشييد">
-            <h3>البناء والتشييد</h3>
-            <p>تنفيذ مشاريع البناء الكبيرة والصغيرة باحترافية وجودة ممتازة، باستخدام أفضل المواد.</p>
-        </div>
-        <div class="service-box">
-            <img src="https://nasssernassser10-glitch.github.io/alsawri-muqawalat/service-carpentry.jpg" alt="النجارة">
-            <h3>النجارة</h3>
-            <p>تصميم وتنفيذ أعمال النجارة الداخلية والخارجية باحترافية عالية وجودة ممتازة.</p>
-        </div>
-        <div class="service-box">
-            <img src="https://nasssernassser10-glitch.github.io/alsawri-muqawalat/service-interior.jpg" alt="التصميم الداخلي">
-            <h3>التصميم الداخلي</h3>
-            <p>تقديم حلول تصميم داخلي مبتكرة وعصرية للمباني والمنازل والمشاريع التجارية.</p>
-        </div>
-    </div>
-</section>
-
-<section id="projects">
-    <h2>أعمالنا</h2>
-    <div class="projects-container">
-        <div class="project-box">
-            <img src="https://nasssernassser10-glitch.github.io/alsawri-muqawalat/project-box-1.jpg" alt="مشروع بناء في جدة">
+    </html>            <img src="https://nasssernassser10-glitch.github.io/alsawri-muqawalat/project-box-1.jpg" alt="مشروع بناء في جدة">
             <h3>مشروع بناء في جدة</h3>
         </div>
         <div class="project-box">
