@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>شركة الصوري للمقاولات العامة</title>
     <meta name="google-site-verification" content="I4rbIf6tWhIm7plVh97e_1reFL7X3NpFW9IiVRlqHbw" />
+
+    <!-- وصف الموقع -->
     <meta name="description" content="شركة الصوري للمقاولات العامة في جدة - أفضل خدمات البناء، النجارة، والتصميم الداخلي">
     <meta name="keywords" content="المقاولات, البناء, النجارة, تصميم داخلي, الصوري, جدة, أعمال المقاولات, مشاريع البناء, خدمات المقاولات العامة, الصيانة العامة">
     <meta name="robots" content="index, follow">
@@ -12,14 +14,14 @@
     <!-- Open Graph -->
     <meta property="og:title" content="شركة الصوري للمقاولات العامة - جدة">
     <meta property="og:description" content="أفضل خدمات المقاولات العامة، النجارة، البناء والتصميم الداخلي في جدة">
-    <meta property="og:image" content="https://nasssernassser10-glitch.github.io/alsawri-muqawalat/about-company.jpg">
+    <meta property="og:image" content="about-company.jpg">
     <meta property="og:url" content="https://nasssernassser10-glitch.github.io/alsawri-muqawalat/">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="شركة الصوري للمقاولات العامة">
     <meta name="twitter:description" content="أفضل خدمات المقاولات العامة، النجارة، البناء والتصميم الداخلي في جدة">
-    <meta name="twitter:image" content="https://nasssernassser10-glitch.github.io/alsawri-muqawalat/about-company.jpg">
+    <meta name="twitter:image" content="about-company.jpg">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -28,82 +30,201 @@
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 
+    <!-- FontAwesome للواتساب والفيسبوك -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f9f9f9;
-            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
         }
 
         /* هيدر */
-        header {
-            background-color: #ffffff;
-            padding: 20px 0;
-            border-bottom: 2px solid #ddd;
-        }
-        header .logo h1 {
-            font-size: 2rem;
-            margin: 0;
-        }
-        header .logo p {
-            margin: 0;
-            font-size: 1rem;
-            color: #555;
-        }
-        .main-nav ul {
+        header .header-top {
             display: flex;
-            justify-content: center;
-            gap: 30px;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #f8f9fa;
+        }
+        header .main-nav ul {
+            display: flex;
+            gap: 20px;
             list-style: none;
             padding-left: 0;
-            margin-top: 15px;
         }
-        .main-nav ul li a {
+        header .main-nav ul li a {
             text-decoration: none;
             color: #333;
-            font-weight: 600;
-            font-size: 1.1rem;
-        }
-        .contact-icons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 15px;
-        }
-        .contact-icons a {
-            font-size: 2rem;
-            color: #fff;
-            width: 60px;
-            height: 60px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50%;
-        }
-        .contact-icons .whatsapp {
-            background-color: #25d366;
-        }
-        .contact-icons .facebook {
-            background-color: #3b5998;
-        }
-        .contact-icons .phone {
-            background-color: #007bff;
+            font-weight: bold;
         }
 
-        /* أقسام الموقع */
-        section {
-            padding: 60px 20px;
+        /* قسم عن الشركة */
+        .section-about {
+            position: relative;
+            background: url('about-company.jpg') no-repeat center top;
+            background-size: cover;
+            height: 400px;
         }
-        section h2 {
+        .section-about .about-img {
+            display: none;
+        }
+
+        /* خدماتنا وأعمالنا */
+        .services-container, .projects-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .service-box, .project-box {
+            flex: 1 1 300px;
+            max-width: 350px;
             text-align: center;
-            margin-bottom: 40px;
-            font-size: 2rem;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        /* ضبط حجم الصور لتكون موحدة */
+        .service-box img {
+            width: 100%;
+            height: 200px; /* نفس الارتفاع لكل الصور */
+            object-fit: cover; 
+            border-radius: 8px;
+        }
+        .project-box img {
+            width: 100%;
+            height: 200px; /* نفس الارتفاع لكل الصور */
+            object-fit: cover; 
+            border-radius: 8px;
+        }
+
+        /* نصوص */
+        h2, h3, p {
             color: #222;
         }
-        section p {
+
+        /* شريط تواصل عائم */
+        .floating-contact {
+            display: none; /* حسب طلبك عدم وجود أي عناصر عائمة */
+        }
+
+        /* Footer */
+        footer {
+            background-color: #004d99;
+            color: #fff;
             text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .services-container, .projects-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            header .header-top {
+                flex-direction: column;
+                gap: 10px;
+            }
+            header .main-nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .service-box, .project-box {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-top">
+        <div class="logo">
+            <h1>شركة الصوري للمقاولات العامة</h1>
+            <p>جدة - المملكة العربية السعودية</p>
+        </div>
+        <div class="contact">
+            <p>📞 0535753283</p>
+            <a href="https://wa.me/+966535753283" target="_blank"><i class="fab fa-whatsapp fa-2x"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100012121335187" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
+        </div>
+    </div>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#about">عن الشركة</a></li>
+            <li><a href="#services">خدماتنا</a></li>
+            <li><a href="#projects">أعمالنا</a></li>
+            <li><a href="#contact">تواصل معنا</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="about" class="section-about">
+    <h2>عن الشركة</h2>
+    <p style="position:absolute; bottom:20px; left:20px; color:white; background:rgba(0,0,0,0.5); padding:10px; border-radius:5px;">
+    شركة الصوري للمقاولات العامة في جدة متخصصة في البناء، النجارة، التصميم الداخلي، وتقدم أفضل خدمات المقاولات العامة والصيانة للمباني. فريقنا محترف ويعمل بأحدث التقنيات لضمان جودة عالية.</p>
+</section>
+
+<section id="services" class="section-services">
+    <h2>خدماتنا</h2>
+    <div class="services-container">
+        <div class="service-box">
+            <img src="service-construction.jpg" alt="شركة الصوري للبناء والتشييد">
+            <h3>البناء والتشييد</h3>
+            <p>تنفيذ مشاريع البناء الكبيرة والصغيرة باحترافية وجودة ممتازة، باستخدام أفضل المواد.</p>
+        </div>
+        <div class="service-box">
+            <img src="service-carpentry.jpg" alt="شركة الصوري للنجارة">
+            <h3>النجارة</h3>
+            <p>تصميم وتنفيذ أعمال النجارة الداخلية والخارجية باحترافية عالية وجودة ممتازة.</p>
+        </div>
+        <div class="service-box">
+            <img src="service-interior.jpg" alt="شركة الصوري للتصميم الداخلي">
+            <h3>التصميم الداخلي</h3>
+            <p>تقديم حلول تصميم داخلي مبتكرة وعصرية للمباني والمنازل والمشاريع التجارية.</p>
+        </div>
+    </div>
+</section>
+
+<section id="projects" class="section-projects">
+    <h2>أعمالنا</h2>
+    <div class="projects-container">
+        <div class="project-box">
+            <img src="project-box-1.jpg" alt="مشروع بناء في جدة">
+            <h3>مشروع بناء في جدة</h3>
+        </div>
+        <div class="project-box">
+            <img src="project-box-2.jpg" alt="تصميم داخلي عصري">
+            <h3>تصميم داخلي عصري</h3>
+        </div>
+        <div class="project-box">
+            <img src="project-box-3.jpg" alt="صيانة مباني عامة">
+            <h3>صيانة مباني عامة</h3>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="section-contact">
+    <h2>تواصل معنا</h2>
+    <p>📞 الهاتف: 0535753283</p>
+    <p>💬 واتساب: <a href="https://wa.me/+966535753283" target="_blank">اضغط هنا للتواصل</a></p>
+    <p>📘 فيسبوك: <a href="https://www.facebook.com/profile.php?id=100012121335187" target="_blank">صفحتنا على فيسبوك</a></p>
+</section>
+
+<footer>
+    <p>© 2025 شركة الصوري للمقاولات العامة - جميع الحقوق محفوظة</p>
+</footer>
+
+</body>
+                                                     </html>            margin: 0 auto;
             color: #555;
             font-size: 1rem;
         }
